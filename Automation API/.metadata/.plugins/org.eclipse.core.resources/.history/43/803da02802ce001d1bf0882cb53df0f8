@@ -1,0 +1,47 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Locators {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//		FirefoxOptions options = new FirefoxOptions();
+//
+//		options.addArguments("start-maximized");
+//
+//		options.addArguments("disable-infobars");
+//
+//		options.addArguments("--disable-extensions"); 
+//
+//		WebDriver driver = new FirefoxDriver(options);
+//
+//		driver.get("https://rsps100.com/vote/760"); 
+//
+//		WebDriverWait(driver, 10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]"))); 
+//
+//		 WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.recaptcha-checkbox-checkmark"))).click();
+//		
+		
+		WebDriverManager.firefoxdriver().setup();
+		 WebDriver driver = new FirefoxDriver(); //launch firefox
+		 
+		 
+		
+		 driver.get("https://signup.ebay.com/pa/crte?siteid=0&co_partnerId=0&UsingSSL=1&rv4=1&ru=https%3A%2F%2Fwww.ebay.com%2F&signInUrl=https%3A%2F%2Fwww.ebay.com%2Fsignin%3Fsgn%3Dreg%26siteid%3D0%26co_partnerId%3D0%26UsingSSL%3D1%26rv4%3D1%26ru%3Dhttps%253A%252F%252Fwww.ebay.com%252F"); // enter url
+		 driver.findElement(By.xpath("//input[@id='personalaccount-radio']")).click();
+		 driver.findElement(By.xpath("//div[@id='mainContent']")).sendKeys("Jyoti");
+		 driver.findElement(By.xpath("	//input[@id='lastname']")).sendKeys("Sharma");
+		 driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("jyoti@yopmail.com");
+		 driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Test@123");
+		 driver.findElement(By.xpath("//button[@id='EMAIL_REG_FORM_SUBMIT']")).click();
+		
+	}
+
+
+}

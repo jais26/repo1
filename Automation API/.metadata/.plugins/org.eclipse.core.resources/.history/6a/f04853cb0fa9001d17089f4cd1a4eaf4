@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Multiplication_table_givenNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.err.println("Java program to print multiplications of given input numbers");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		
+	}
+
+}

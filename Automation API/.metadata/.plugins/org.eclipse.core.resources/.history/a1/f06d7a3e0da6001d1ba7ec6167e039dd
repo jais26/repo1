@@ -1,0 +1,23 @@
+
+public class Third_Java_Project {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	System.out.println("FLOW CONTROL STATMENT");
+	
+	// flow control statement
+	
+	System.out.println("IF statment");
+	
+	int a = 3, b = 4;
+	
+	if (a>b)   //flase so next output will print // if a is greater than b then 1st output will print
+	    {
+		System.out.println(" a is greater then b ");
+		}
+	
+	    System.out.println("End of the program");
+	
+	} 		
+}

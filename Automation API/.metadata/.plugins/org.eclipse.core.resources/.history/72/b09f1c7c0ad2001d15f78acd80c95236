@@ -1,0 +1,20 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Aleart_popup {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+		WebDriver driver = new FirefoxDriver(); 
+		Thread.sleep(2000);
+		driver.manage().window().maximize();
+		driver.get("https://mail.rediff.com/cgi-bin/login.cgi"); 
+		
+		Alert alert = driver.switchTo().alert();
+		System.out.println(alert.getText());
+	}
+
+}

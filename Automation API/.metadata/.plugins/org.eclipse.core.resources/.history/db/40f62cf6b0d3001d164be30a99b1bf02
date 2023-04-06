@@ -1,0 +1,31 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class MouseMovmentCncept {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+        WebDriver driver = new FirefoxDriver();
+
+		Alert alert = driver.switchTo().alert();
+		
+		// we need test by applying validations using conditions
+		String alertMessage = driver.switchTo().alert().getText();
+		System.out.println(alert.getText()); // to check what text is written on alert or popup
+		
+		
+		driver.manage().window().maximize(); //maximize window
+		driver.get("https://www.spicejet.com/"); // enter url
+		Thread.sleep(5000);
+		
+		
+		// Action class used to mause movment
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.className("Add-ons"))).build().perform();
+	}
+
+}

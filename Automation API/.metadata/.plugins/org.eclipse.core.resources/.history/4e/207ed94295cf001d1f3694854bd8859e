@@ -1,0 +1,16 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Aleart_popup {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new FirefoxDriver(); 
+		Thread.sleep(2000);
+		driver.manage().window().maximize();
+		driver.get("https://google.com"); 
+	}
+
+}
